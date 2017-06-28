@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26F8797C1F03864700BE92F2 /* TestLocations.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 26F8797B1F03864700BE92F2 /* TestLocations.gpx */; };
 		766B6FDA1E03B4CF00683608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B6FD91E03B4CF00683608 /* main.m */; };
 		766B6FDD1E03B4CF00683608 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B6FDC1E03B4CF00683608 /* AppDelegate.m */; };
 		766B6FE01E03B4CF00683608 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766B6FDF1E03B4CF00683608 /* ViewController.m */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		0FE74849FBE2C156A13A6528 /* Pods-SampleForKHA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleForKHA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleForKHA/Pods-SampleForKHA.debug.xcconfig"; sourceTree = "<group>"; };
+		26F8797B1F03864700BE92F2 /* TestLocations.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TestLocations.gpx; sourceTree = "<group>"; };
 		766B6FD51E03B4CE00683608 /* SampleForKHA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleForKHA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		766B6FD91E03B4CF00683608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		766B6FDB1E03B4CF00683608 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		766B6FCC1E03B4CA00683608 = {
 			isa = PBXGroup;
 			children = (
+				26F8797B1F03864700BE92F2 /* TestLocations.gpx */,
 				766B6FD71E03B4CE00683608 /* SampleForKHA */,
 				766B6FD61E03B4CE00683608 /* Products */,
 				766B6FF61E03B78700683608 /* Frameworks */,
@@ -343,6 +346,7 @@
 				766B6FE81E03B4CF00683608 /* LaunchScreen.storyboard in Resources */,
 				766B6FE51E03B4CF00683608 /* Assets.xcassets in Resources */,
 				766B6FE31E03B4CF00683608 /* Main.storyboard in Resources */,
+				26F8797C1F03864700BE92F2 /* TestLocations.gpx in Resources */,
 				766B6FF31E03B6FF00683608 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,7 +381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CB1C67F11285C9E92FCAD358 /* [CP] Copy Pods Resources */ = {
