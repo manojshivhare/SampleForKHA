@@ -25,6 +25,12 @@
     NSTimer *locationTimer;
     
     GMSMarker *finalMArker;
+    
+    
+    GMSMutablePath *path;
+    
+    
+    GMSPolyline *rectangle;
 }
 @end
 
@@ -41,6 +47,17 @@
     mapView.mapType = kGMSTypeNormal;
     mapView.settings.rotateGestures = NO;
     mapView.settings.tiltGestures = NO;
+    
+    
+    //initializing a path object here
+    path = [GMSMutablePath path];
+    
+    
+    
+    rectangle = [GMSPolyline polylineWithPath:path];
+    rectangle.strokeWidth = 5;
+    rectangle.map = mapView;
+
     
     locationManager=[[CLLocationManager alloc]init];
     locationManager.delegate=self;
@@ -63,6 +80,8 @@
     newLocationCord = newLocation;
     
     oldLocationCord = oldLocation;
+    
+    [path addCoordinate:CLLocationCoordinate2DMake(newLocationCord.coordinate.latitude,newLocationCord.coordinate.longitude)];
     
     NSLog(@"%@,%@",newLocationCord,oldLocationCord);
     
@@ -90,21 +109,8 @@
     }
     else
     {
-        GMSMutablePath *path = [GMSMutablePath path];
+        rectangle.path = path;
         
-        [path addCoordinate:CLLocationCoordinate2DMake(newLocationCord.coordinate.latitude,newLocationCord.coordinate.longitude)];
-        
-        NSLog(@"%f,%f",newLocationCord.coordinate.latitude,newLocationCord.coordinate.longitude);
-        
-        [path addCoordinate:CLLocationCoordinate2DMake(oldLocationCord.coordinate.latitude,oldLocationCord.coordinate.longitude )];
-        
-        NSLog(@"%f,%f",oldLocationCord.coordinate.latitude,oldLocationCord.coordinate.longitude);
-        
-        GMSPolyline *rectangle = [GMSPolyline polylineWithPath:path];
-        
-        rectangle.strokeWidth = 5;
-        
-        rectangle.map = mapView;
     }
 }
 
